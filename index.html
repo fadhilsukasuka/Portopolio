@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portofolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
-  
     * {
       box-sizing: border-box;
       padding: 0;
@@ -21,7 +22,7 @@
     }
 
     body {
-      display: flex;
+      display: flex; 
       justify-content: center;
       align-items: center;
       flex-direction: column;
@@ -31,6 +32,7 @@
       background-repeat: no-repeat;
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
 
     .overlay {
@@ -59,6 +61,7 @@
       top: 20px;
       right: 20px;
       display: flex;
+      flex-wrap: wrap;
       gap: 10px;
       z-index: 1;
       opacity: 0;
@@ -71,7 +74,7 @@
 
     .button-group button {
       padding: 10px 20px;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       border: none;
       border-radius: 8px;
@@ -82,6 +85,9 @@
       transform: translateY(10px);
       opacity: 0;
       animation: slideIn 2s forwards;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .button-group button:hover {
@@ -89,10 +95,10 @@
     }
 
     .center-text {
-      text-align: center;
       z-index: 1;
       opacity: 0;
       animation: fadeIn 4s forwards;
+      padding: 20px;
     }
 
     .center-text h6 {
@@ -110,7 +116,6 @@
       animation: slideInFromRight 2s forwards;
     }
 
-  
     @keyframes fadeIn {
       0% { opacity: 0; }
       100% { opacity: 1; }
@@ -130,6 +135,53 @@
       0% { transform: translateX(50px); opacity: 0; }
       100% { transform: translateX(0); opacity: 1; }
     }
+
+    
+    @media (max-width: 768px) {
+      .top-left {
+        font-size: 24px;
+      }
+
+      .button-group {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button-group button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      .center-text h6 {
+        font-size: 18px;
+      }
+
+      .center-text h3 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .center-text h6 {
+        font-size: 16px;
+      }
+
+      .center-text h3 {
+        font-size: 28px;
+      }
+
+      .button-group {
+        gap: 8px;
+      }
+
+      .button-group button {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -140,7 +192,9 @@
   <div class="button-group">
     <a href="about.html"><button>About</button></a>
     <a href="portofolio.html"><button>Portofolio</button></a>
-    <a href="contact.html"><button>Contact</button></a>
+    <a href="https://www.instagram.com/thmfdilp_" target="_blank">
+      <button><i class="fab fa-instagram"></i> Contact</button>
+    </a>
   </div>
 
   <div class="center-text">
